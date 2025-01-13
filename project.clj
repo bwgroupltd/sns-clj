@@ -1,8 +1,8 @@
-(defproject org.clojars.bigsy/sns-clj "0.1.0"
-  :description "sns fake for clojure"
-  :url "https://github.com/Bigsy/sns-clj"
+(defproject audiogum/sns-clj "0.1.0"
+  :description "sns fake for clojure forked from https://github.com/Bigsy/sns-clj"
+  :url "https://github.com/bwgroupltd/sns-clj"
   :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+            :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [integrant "0.8.0"]
                  [org.clojure/tools.logging "1.1.0"]
@@ -15,5 +15,19 @@
                                   [com.cognitect.aws/sns "825.2.1268.0"]
                                   [com.cognitect.aws/sqs "822.2.1109.0"]
                                   [org.clojars.bigsy/elasticmq-clj "0.1.0"]
-                                  [cheshire "5.11.0"]]}})
+                                  [cheshire "5.11.0"]]}}
 
+  :release-tasks [["vcs" "assert-committed"]
+                  ["change" "version" "leiningen.release/bump-version" "release"]
+                  ["vcs" "commit"]
+                  ["vcs" "tag" "--no-sign"]
+                  ["deploy" "releases"]
+                  ["change" "version" "leiningen.release/bump-version" "patch"]
+                  ["vcs" "commit"]
+                  ["vcs" "push" "origin" "main"]]
+
+  :plugins [[s3-wagon-private "1.3.4"]]
+
+  :repositories {"releases" {:url           "s3p://repo.bowerswilkins.net/releases/"
+                             :no-auth       true
+                             :sign-releases false}})
