@@ -1,4 +1,4 @@
-(defproject audiogum/sns-clj "0.1.0-SNAPSHOT"
+(defproject audiogum/sns-clj "0.1.0"
   :description "sns fake for clojure forked from https://github.com/Bigsy/sns-clj"
   :url "https://github.com/bwgroupltd/sns-clj"
   :license {:name "Eclipse Public License"
