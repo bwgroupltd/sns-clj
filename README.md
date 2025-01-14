@@ -6,7 +6,8 @@ sns-clj.sqs-test.clj provides a good example of how to test and integration with
 
 ## Usage
 
-[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.bigsy/sns-clj.svg)](https://clojars.org/org.clojars.bigsy/sns-clj)
+[audiogum/sns-clj "0.2.0"]
+
 ### Development:
 
 ```clojure
