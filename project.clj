@@ -14,7 +14,7 @@
                                   [com.cognitect.aws/endpoints "1.1.12.358"]
                                   [com.cognitect.aws/sns "825.2.1268.0"]
                                   [com.cognitect.aws/sqs "822.2.1109.0"]
-                                  [org.clojars.bigsy/elasticmq-clj "0.1.0"]
+                                  [audiogum/elasticmq-clj "0.2.0"]
                                   [cheshire "5.11.0"]]}}
 
   :release-tasks [["vcs" "assert-committed"]
